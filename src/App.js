@@ -1,22 +1,21 @@
-
-import Gallery from "./componentes/Gallery/Gallery";
-import Form from "./componentes/Form/Form";
-import FeedbackForm from "./componentes/FeedbackForm/FeedbackForm";
-import FeedbackForm2 from "./componentes/FeedbackForm2/FeedbackForm2";
-
+import { Route, Routes } from "react-router-dom";
+import UseState from "./rutas/UseState";
+import Inicio from "./rutas/Inicio";
+import UseEffect from "./rutas/UseEffect";
+import './app.css'
+import Eventos from "./rutas/Eventos";
 
 function App() {
   return (
    <div>
-    <h1>Mis ejercicios</h1>
-    <h2>Ejercicio 1</h2>
-      <Gallery/>
-    <h2>Ejercicio 2</h2>  
-      <Form/>
-    <h2>Ejercicio 3</h2>
-      <FeedbackForm/>
-    <h2>Ejercicio 4</h2>
-      <FeedbackForm2/>
+    
+    <Routes>
+      <Route path="/" element={<Inicio/>}></Route>
+      <Route path="useState" element={<UseState/>}></Route>
+      <Route path="useEffect" element={<UseEffect/>}></Route>
+      <Route path="eventos" element={<Eventos/>}></Route>
+    </Routes>  
+      
    </div>
 
   );
